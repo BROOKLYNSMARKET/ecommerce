@@ -11,4 +11,9 @@
 3. [Sqlite3](https://www.sqlite.org/index.html)
 4. [Bootstrap](https://getbootstrap.com/)
 
+### Rodando Server
+Dentro da pasta mymarket execute o comando
+> python manage.py migrate
 
+Para rodar o server execute
+> pathon manage.py runserver

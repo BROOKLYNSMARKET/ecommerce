@@ -16,4 +16,4 @@ Dentro da pasta mymarket execute o comando
 > python manage.py migrate
 
 Para rodar o server execute
-> pathon manage.py runserver
+> python manage.py runserver

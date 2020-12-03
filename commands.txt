@@ -1,0 +1,11 @@
+Criando anbiente virtual
+python3 -m venv myvenv
+
+Ativando ambiente
+source myvenv/bin/activate (linux)
+
+atualizando o pip
+python -m pip install --upgrade pip
+
+instale as dependências
+pip install -r requirements.txt

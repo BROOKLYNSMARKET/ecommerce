@@ -10,6 +10,8 @@ python -m pip install --upgrade pip
 instale as dependências
 pip install -r requirements.txt
 
+Crie um arquivo .env e adicione a SECRET_KEY e DEBUG=True
+
 VAI APARECER UM 'ERRO' ANTES PORQUE TEM QUE CONFIGURAR O  DATABASE ANTES DE FAZER
 'python manage.py migrate'
 

@@ -9,3 +9,9 @@ python -m pip install --upgrade pip
 
 instale as dependências
 pip install -r requirements.txt
+
+VAI APARECER UM 'ERRO' ANTES PORQUE TEM QUE CONFIGURAR O  DATABASE ANTES DE FAZER
+'python manage.py migrate'
+
+rodando o server
+python manage.py runserver

@@ -73,12 +73,13 @@ WSGI_APPLICATION = 'market.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ.get('DB_NAME', 'dbmarket'),
+        'NAME': os.environ.get('DB_NAME', config('DB_USER', default='dbmarket')),
         'USER': os.environ.get('DB_USER', 'postgres'),
-        'PASSWORD': os.environ.get('DB_PASS', '22082000'), #Colocar senha/user de cada bd
+        'PASSWORD': os.environ.get('DB_PASS', config('DB_PASSWORD')), #Colocar senha/user de cada bd
         'HOST': 'localhost',
         'PORT': '5432',
     }

@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'market.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ.get('DB_NAME', config('DB_USER', default='dbmarket')),
+        'NAME': os.environ.get('DB_NAME', config('DB_NAME', default='dbmarket')),
         'USER': os.environ.get('DB_USER', 'postgres'),
         'PASSWORD': os.environ.get('DB_PASS', config('DB_PASSWORD')), #Colocar senha/user de cada bd
         'HOST': 'localhost',

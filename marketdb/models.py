@@ -6,8 +6,8 @@ from djmoney.models.fields import MoneyField
 class Produto(models.Model):
     autor = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     dataCriacao = models.DateTimeField(default=timezone.now)
-    titulo = models.CharField(max_length=200)
-    descricao = models.CharField(max_length=400)
+    titulo = models.CharField(max_length=50)
+    descricao = models.CharField(max_length=200)
     preco = MoneyField(
         decimal_places=2,
         default=0,
@@ -23,3 +23,4 @@ class Produto(models.Model):
 
     def __str__(self):
         return self.titulo
+

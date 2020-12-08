@@ -37,3 +37,16 @@ class Produto(models.Model):
     def __str__(self):
         return self.titulo
 
+<<<<<<< HEAD
+=======
+class CategoriaProduto(models.Model):
+    nome = models.CharField(max_length=50)
+    dataCriacao = models.DateTimeField(default=timezone.now)
+
+    def cadastrar(self):
+        self.dataCriacao = timezone.now()
+        self.save()
+
+    def __str__(self):
+        return self.nome
+>>>>>>> 93d9212ec7fbf9804d3cf89f3db9ba2248a8fd08

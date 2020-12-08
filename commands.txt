@@ -17,6 +17,9 @@ pip install psycopg2
 ou
 pip install psycopg2-binary
 
+Makemigrations
+python manage.py makemigrations
+
 Migrate
 python manage.py migrate
 

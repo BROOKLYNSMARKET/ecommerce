@@ -24,7 +24,7 @@ class Produto(models.Model):
     def __str__(self):
         return self.titulo
 
-class categoriaProduto(models.Model):
+class CategoriaProduto(models.Model):
     nome = models.CharField(max_length=50)
     dataCriacao = models.DateTimeField(default=timezone.now)
 

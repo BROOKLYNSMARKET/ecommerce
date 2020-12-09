@@ -3,8 +3,21 @@ from django.utils import timezone
 from django.conf import settings
 from djmoney.models.fields import MoneyField
 
+
+class CategoriaProduto(models.Model):
+    nome = models.CharField(max_length=50)
+    dataCriacao = models.DateTimeField(default=timezone.now)
+
+    def cadastrar(self):
+        self.dataCriacao = timezone.now()
+        self.save()
+
+    def __str__(self):
+        return self.nome
+
 class Produto(models.Model):
     autor = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    categoria = models.ForeignKey(CategoriaProduto, on_delete=models.CASCADE, default='')
     dataCriacao = models.DateTimeField(default=timezone.now)
     titulo = models.CharField(max_length=50)
     descricao = models.CharField(max_length=200)
@@ -23,14 +36,3 @@ class Produto(models.Model):
 
     def __str__(self):
         return self.titulo
-
-class CategoriaProduto(models.Model):
-    nome = models.CharField(max_length=50)
-    dataCriacao = models.DateTimeField(default=timezone.now)
-
-    def cadastrar(self):
-        self.dataCriacao = timezone.now()
-        self.save()
-
-    def __str__(self):
-        return self.nome

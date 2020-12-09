@@ -1,2 +1,4 @@
 from django.shortcuts import render
-import models
+
+def lista_produto(request):
+    return render(request, 'marketdb/lista_produto.html', {})

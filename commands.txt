@@ -28,3 +28,16 @@ python manage.py createsuperuser
 
 rodando o server
 python manage.py runserver
+
+
+Erro do Banco de dados
+colocar o caminho(postgres) no path
+
+dropdb -U postgres dbmarket
+createdb -U postgres dbmarket
+
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+
+

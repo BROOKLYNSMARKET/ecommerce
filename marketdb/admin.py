@@ -3,3 +3,4 @@ from .models import Produto, CategoriaProduto
 
 admin.site.register(Produto)
 admin.site.register(CategoriaProduto)
+# Register your models here.

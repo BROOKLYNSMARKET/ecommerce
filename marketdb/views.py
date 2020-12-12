@@ -1,5 +1,6 @@
 from django.shortcuts import render
+from .models import Produto, CategoriaProduto
 
 def lista_produto(request):
-    tiago = 'iTiagod'
-    return render(request, 'marketdb/lista_produto.html', {})
+    List = Produto.objects.all()
+    return render(request, 'marketdb/lista_produto.html', {'List': List})

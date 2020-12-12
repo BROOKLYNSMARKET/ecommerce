@@ -27,7 +27,7 @@ class Produto(models.Model):
         default_currency='BRL',
         max_digits=6,
     )
-    imagem = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=100, default='SEM IMAGEM')
+    imagem = models.ImageField(upload_to='media', height_field=None, width_field=None, max_length=100, default='SEM IMAGEM')
 
 
     def cadastrar(self):

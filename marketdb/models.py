@@ -17,7 +17,7 @@ class CategoriaProduto(models.Model):
 
 class Produto(models.Model):
     autor = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    categoria = models.ForeignKey(CategoriaProduto, default='',on_delete=models.CASCADE)
+    categoria = models.ForeignKey(CategoriaProduto, default='', on_delete=models.CASCADE)
     dataCriacao = models.DateTimeField(default=timezone.now)
     titulo = models.CharField(max_length=50)
     descricao = models.CharField(max_length=200)
@@ -27,7 +27,7 @@ class Produto(models.Model):
         default_currency='BRL',
         max_digits=6,
     )
-    imagem = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=100, default='SEM IMAGEM')
+    imagem = models.ImageField(upload_to='media', height_field=None, width_field=None, max_length=100, default='SEM IMAGEM')
 
 
     def cadastrar(self):
@@ -36,3 +36,4 @@ class Produto(models.Model):
 
     def __str__(self):
         return self.titulo
+

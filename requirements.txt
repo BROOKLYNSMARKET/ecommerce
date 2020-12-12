@@ -3,3 +3,4 @@ python-decouple
 psycopg2-binary
 Pillow
 django-money
+django-feather

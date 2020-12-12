@@ -4,7 +4,21 @@
 </head>
 <body>
     {% block content %}
-        <h1 background="#000">Brooklyns Market</h1>
-        <p class="h1">A Açaíteria</p>
+        <table class="table table-striped">
+	        <thead class="thead-dark">
+		        <tr>
+			        <th scope="Nome do produto">Nome do produto</th>
+			        <th scope="Preço">Preço</th>
+		        </tr>
+	        </thead>
+	        {% for value in List %}
+	        <tbody>
+		        <tr>
+			        <td>{{ value.titulo }}</td>
+			        <td>{{ value.preco }}</td>
+		        </tr>
+	        </tbody>
+	        {% endfor %}
+        </table>
     {% endblock %}
 </body>

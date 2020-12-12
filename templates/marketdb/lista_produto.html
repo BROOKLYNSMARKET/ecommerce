@@ -1,8 +1,10 @@
-<html>
-    <head>
-        <title>Cardápio</title>
-    </head>
-    <body>
-        <h1>Testando</h1>
-    </body>
-</html>
+{% extends 'share_layout/base.html' %}
+<head>
+    <title>{% block title %} Cardápio {% endblock title %}</title>
+</head>
+<body>
+    {% block content %}
+        <h1 background="#000">Brooklyns Market</h1>
+        <p class="h1">A Açaíteria</p>
+    {% endblock %}
+</body>

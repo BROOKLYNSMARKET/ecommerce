@@ -1,24 +1,25 @@
 {% extends 'share_layout/base.html' %}
 <head>
-    <title>{% block title %} Cardápio {% endblock title %}</title>
+  <title>{% block title %} Cardápio {% endblock title %}</title>
 </head>
 <body>
-    {% block content %}
-        <table class="table table-striped">
-	        <thead class="thead-dark">
-		        <tr>
-			        <th scope="Nome do produto">Nome do produto</th>
-			        <th scope="Preço">Preço</th>
-		        </tr>
-	        </thead>
-	        {% for value in List %}
-	        <tbody>
-		        <tr>
-			        <td>{{ value.titulo }}</td>
-			        <td>{{ value.preco }}</td>
-		        </tr>
-	        </tbody>
-	        {% endfor %}
-        </table>
-    {% endblock %}
+  {% block content %}
+<div class="d-flex m-5 text-center">
+  {% for value in List %}
+  <div class="card" style="width: 18rem; height:10rem;">
+    <img src="{{value.imagem}}" class="img-thumbnail" alt="{{value.imagem}}" style="object-fit:contain">
+    <div class="card-body">
+      <h5 class="card-title">{{value.titulo}}</h5>
+      <p class="card-text">
+        {{value.descricao}}
+      </p>
+	  <p class="card-text">
+        {{value.preco}}
+      </p>
+      <a href="#" class="btn btn-primary">Adicionar ao carrinho</a>
+    </div>
+  </div>
+  {% endfor %}
+  </div>
+ {% endblock %}
 </body>

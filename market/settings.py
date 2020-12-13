@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'marketdb',
     'django_feather',
     'accounts',
+    'cart',
 ]
 
 MIDDLEWARE = [
@@ -132,3 +133,5 @@ MEDIA_URL = '/'
 
 # LOGIN_REDIRECT_URL = 'home'
 # LOGOUT_REDIRECT_URL = 'home'
+
+CART_SESSION_ID = 'cart'

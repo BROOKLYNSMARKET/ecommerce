@@ -1,11 +1,11 @@
-{% extends 'share_layout/base.html' %}
+{% comment %} {% extends 'share_layout/base.html' %} {% endcomment %}
 
 {% block title %}Home{% endblock %}
 
 {% block content %}
 {% if user.is_authenticated %}
-  Hi {{ user.username }}!
-  <p><a href="{% url 'logout' %}">Sair</a></p>
+  <p class="h1 text-danger">Olá, {{ user.username }}!</p>
+  <p><a href="{% url 'logout' %}">Log Out</a></p>
 {% else %}
   <p>Você não está logado!</p>
   <a href="{% url 'login' %}">Conectar</a>

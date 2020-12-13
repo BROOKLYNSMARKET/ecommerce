@@ -1,0 +1,24 @@
+{% extends 'share_layout/base.html' %}
+<head>
+    <title>{% block title %} Cardápio {% endblock title %}</title>
+</head>
+<body>
+    {% block content %}
+        <table class="table table-striped">
+	        <thead class="thead-dark">
+		        <tr>
+			        <th scope="Nome do produto">Nome do produto</th>
+			        <th scope="Preço">Preço</th>
+		        </tr>
+	        </thead>
+	        {% for value in List %}
+	        <tbody>
+		        <tr>
+			        <td>{{ value.titulo }}</td>
+			        <td>{{ value.preco }}</td>
+		        </tr>
+	        </tbody>
+	        {% endfor %}
+        </table>
+    {% endblock %}
+</body>

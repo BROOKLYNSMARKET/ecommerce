@@ -1,12 +1,12 @@
 {% extends 'share_layout/base.html' %} {% block title %}Entrar | Brooklyn's
 Market{% endblock %} 
 {% block content %}
-<div class="card text-center" style="width: 18rem; margin:auto">
+<div class="card text-left" style="width: 18rem; margin:auto">
   <div class="card-body">
-    <h5 class="card-title">Entrar</h5>
+    <h5 class="card-title text-center">Entrar</h5>
     <form method="post">
       {% csrf_token %} {{ form.as_p }}
-      <button type="submit">Entrar</button>
+      <button class="btn btn-primary" type="submit">Entrar</button>
     </form>
   </div>
 </div>

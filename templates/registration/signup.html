@@ -3,10 +3,12 @@
 {% block title %}Cadastrar | Brooklyn's Market{% endblock %}
 
 {% block content %}
-  <h2>Cadastrar</h2>
+<div class="m-5">
+  <h5>Cadastrar</h5>
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Cadastrar</button>
+    <button class="btn btn-primary" type="submit">Cadastrar</button>
   </form>
+</div>
 {% endblock %}

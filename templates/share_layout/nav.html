@@ -1,0 +1,48 @@
+{% comment %} {% url 'home' as home_url %}
+{% url 'contact' as contact_url %}
+{% url 'products:list' as products_list_url %}
+{% url 'login' as login_url %}
+ {% endcomment %}
+{% url 'logout' as logout_url %}
+{% url 'signup' as register_url %}
+{% url 'login' as login_url %}
+
+{% load icon %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary bg-gradient mb-3">
+  <div class='container'>
+    <a class="navbar-brand" href="{{ '/' }}">
+      {% comment %} <img src="https://lh3.googleusercontent.com/FNEQBKkePPPWR_ecVU2iZHfxiwp-JEBak0Gt4kVrHGUTkvpIGKNnvQSczpUn1HMNbR9fr0IqCOnyKcneRA=w1080-h608-p-no-v0" width="30" height="30" class="d-inline-block align-top" alt=""> {% endcomment %}
+      {% if nome_da_marca %} 
+      <span style="color=#7159c1; font-family: 'Handlee', cursive;">{{ nome_da_marca }}</span> 
+      {% else %} Brooklyn's Market
+      {% endif %}
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        {% comment %} <li class="nav-item {% if request.path == products_list_url %} active {% endif %}">
+          <a class="nav-link" href="{{ products_list_url }}">Produtos</a>
+        </li> {% endcomment %}
+        {% if request.user.is_authenticated %}
+        <li class="nav-item {% if request.path == login_url %} active {% endif %}"> 
+          <a class="nav-link" href="{{ logout_url }}">Logout</a> 
+        </li>
+        {% else %}
+        <li class="nav-item {% if request.path == login_url %} active {% endif %}">
+          <a class="nav-link" href="{{ login_url }}">Login</a>
+        </li>
+        <li class="nav-item {% if request.path == register_url %} active {% endif %}"> 
+          <a class="nav-link" href="{{ register_url }}">Registrar-se</a> 
+        </li>
+      {% endif %}
+      </ul>
+      {% comment %} {% include 'search/snippets/search-form.html' %} {% endcomment %}
+    </div>
+    <div id="carrinho" class="text-light">
+      <a href="#">{% icon "shopping-cart" color="#EBEBEB" class="css-class" height="25" width="25" %}</a>
+    </div>
+  </div><!--fim container-->
+</nav>

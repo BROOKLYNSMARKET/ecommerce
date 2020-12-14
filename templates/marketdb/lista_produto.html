@@ -1,25 +1,41 @@
 {% extends 'share_layout/base.html' %}
 <head>
-  <title>{% block title %} Cardápio {% endblock title %}</title>
+  <title>{% block title %} Home | Brooklyn's Market {% endblock title %}</title>
+  <style>
+    h1 {
+      font-family: "Handlee", cursive;
+    }
+
+    h5 {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
   {% block content %}
-<div class="d-flex m-5 text-center">
-  {% for value in List %}
-  <div class="card" style="width: 18rem; height:10rem;">
-    <img src="{{value.imagem}}" class="img-thumbnail" alt="{{value.imagem}}" style="object-fit:contain">
-    <div class="card-body">
-      <h5 class="card-title">{{value.titulo}}</h5>
-      <p class="card-text">
-        {{value.descricao}}
-      </p>
-	  <p class="card-text">
-        {{value.preco}}
-      </p>
-      <a href="#" class="btn btn-primary">Adicionar ao carrinho</a>
+  <div class="d-flex m-5 text-left">
+    {% for value in List %}
+    <div class="card mx-3" style="width: 18rem; height: 10rem">
+      <img
+        src="{{value.imagem}}"
+        class="img-thumbnail"
+        alt="{{value.imagem}}"
+        style="width: 100%; min-height: 194px; object-fit: contain"
+      />
+      <div class="card-body" style="font-family: 'Open Sans', sans-serif">
+        <h5
+          class="card-title"
+          style="font-weight: 600"
+        >
+          {{value.titulo}}
+        </h5>
+        <p class="card-text" style="font-weight:400">{{value.descricao}}</p>
+        <p class="card-text">{{value.preco}}</p>
+        <a href="#" class="btn btn-primary">Adicionar ao carrinho</a>
+      </div>
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
-  </div>
- {% endblock %}
+  {% endblock %}
 </body>

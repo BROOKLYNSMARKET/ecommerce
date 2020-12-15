@@ -32,7 +32,7 @@ Utilizaremos a linguagem de programação Python junto com o framework Django, j
 1. Criando ambiente virtual
     > python3 -m venv myvenv
 
-2. Ativando ambiente virtual
+2. Ativando ambiente virtual  
     2.1 Linux
     > source myvenv/bin/activate
 

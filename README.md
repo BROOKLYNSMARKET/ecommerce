@@ -9,7 +9,7 @@
 ### Sobre
 O Brooklyn's Market se trata de uma loja virtual de uma Açaíteria. O cliente poderá ver o cardápio, fazer pedidos e ver os produtos no carrinho de compras.
 
-### Sreenshots
+### Screenshots
 ##### Home
 ![Home Page](/screenshots/home.png)
 
